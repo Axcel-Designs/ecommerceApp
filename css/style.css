@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+nav{ 
+    width: 50%;
+}
+nav ul{
+    display: flex;
+    gap: 2vw;
+    a{
+        color: black;
+    }
+}
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 2vw;
+}

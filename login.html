@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Login/Register</h1>
+    </header>
+    <main>
+      <div id="form-container">
+        <button onclick="toggleForm('login')">Login</button>
+        <button onclick="toggleForm('register')">Register</button>
+
+        <form
+          id="login-form"
+          style="display: none"
+          onsubmit="handleLogin(event)"
+        >
+          <h2>Login</h2>
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required />
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required />
+          <button type="submit">Login</button>
+        </form>
+
+        <form
+          id="register-form"
+          style="display: none"
+          onsubmit="handleRegister(event)"
+        >
+          <h2>Register</h2>
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" required />
+          <label for="register-password">Password:</label>
+          <input type="password" id="register-password" required />
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </main>
+    <script>
+      function toggleForm(formType) {
+        document.getElementById("login-form").style.display =
+          formType === "login" ? "block" : "none";
+        document.getElementById("register-form").style.display =
+          formType === "register" ? "block" : "none";
+      }
+
+      function handleRegister(event) {
+        event.preventDefault();
+        const email = document.getElementById("register-email").value;
+        const password = document.getElementById("register-password").value;
+        localStorage.setItem("user", JSON.stringify({ email, password }));
+        alert("Registration successful!");
+        location.reload();
+        document.getElementById("login-form").style.display = "flex";
+      }
+
+      function handleLogin(event) {
+        event.preventDefault();
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user && user.email === email && user.password === password) {
+          alert("Login successful!");
+          window.location.href = "home.html";
+        } else {
+          alert("Invalid credentials!");
+        }
+      }
+    </script>
+  </body>
+</html>
