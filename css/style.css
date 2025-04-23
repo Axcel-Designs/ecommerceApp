@@ -22,6 +22,9 @@ nav ul{
         color: black;
     }
 }
+nav ul li a:hover{
+    color: #f0a500;
+}
 
 footer{
     background-color: black;
