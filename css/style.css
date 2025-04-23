@@ -8,12 +8,17 @@ header{
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    height: 100px;
 }
-
+#ham {
+    display: none;
+    cursor: pointer;
+}
 nav ul{
     display: flex;
     gap: 2vw;
-    a{
+    a{ 
+        cursor: pointer;
         color: black;
     }
 }
@@ -23,4 +28,12 @@ footer{
     color: aliceblue;
     text-align: center;
     padding: 2vw;
+}
+@media screen and (max-width: 768px) {
+    nav ul{
+        display: none;
+    }
+        #ham {
+            display: flex;
+        }
 }
