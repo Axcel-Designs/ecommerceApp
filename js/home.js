@@ -1,7 +1,9 @@
-const ham = document.getElementById('ham')
-ham.addEventListener('click',()=>{
-    // document.querySelector('nav ul').style.display === 'flex' ? document.querySelector('nav ul').style.display = 'none' : document.querySelector('nav ul').style.display = 'flex' 
-    document.querySelector('nav ul').style.display = 'flex'
-    document.querySelector('nav ul').style.marginTop = '3vh'
-    document.querySelector('nav ul').style.flexDirection = 'column'
-})
+const ham = document.getElementById("ham");
+const navList = document.querySelector("nav ul");
+
+ham.addEventListener("click", () => {
+  navList.style.display === 'flex' ? navList.style.display = 'none' : navList.style.display = 'flex'
+//   navList.style.display = "flex";
+ navList.style.marginTop = "3vh";
+ navList.style.flexDirection = "column";
+});

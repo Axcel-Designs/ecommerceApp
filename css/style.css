@@ -3,17 +3,24 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    font-family: 'poppins';
+}
+body{
+    width: 100%;
 }
 header{
     padding: 10px;
     display: flex;
     justify-content: space-between;
     height: 100px;
+    background: rgb(215, 224, 228);
 }
 #ham {
     display: none;
     cursor: pointer;
+    padding: 2vw;
 }
+
 nav ul{
     display: flex;
     gap: 2vw;
@@ -31,12 +38,4 @@ footer{
     color: aliceblue;
     text-align: center;
     padding: 2vw;
-}
-@media screen and (max-width: 768px) {
-    nav ul{
-        display: none;
-    }
-        #ham {
-            display: flex;
-        }
 }
