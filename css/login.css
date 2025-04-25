@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+body{
+    width: 100%;
+}
+/* header{
+   text-align: center
+} */
+main{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}  
+label,input{
+    margin: 1vw 0;
+}
+label {
+    width: 500px;
+}
+button{
+    padding: 3px 10px;
+    background-color: #f0a500;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #d68a00;
+}

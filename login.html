@@ -4,41 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login/Register</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
-    <header>
-      <h1>Login/Register</h1>
-    </header>
     <main>
+      <!-- <header> -->
+        <h1>Login/Register</h1>
+      <!-- </header> -->
+      <br />
       <div id="form-container">
         <button onclick="toggleForm('login')">Login</button>
         <button onclick="toggleForm('register')">Register</button>
 
+        <!-- style="display: none" -->
         <form
           id="login-form"
-          style="display: none"
           onsubmit="handleLogin(event)"
         >
           <h2>Login</h2>
-          <label for="login-email">Email:</label>
-          <input type="email" id="login-email" required />
-          <label for="login-password">Password:</label>
-          <input type="password" id="login-password" required />
-          <button type="submit">Login</button>
+          <label for="login-email">Email</label><br>
+          <input type="email" id="login-email" required/>
+          <br />
+          <label for="login-password">Password</label><br>
+          <input type="password" id="login-password" required/>
+          <br />
+          <button type="submit">Submit</button>
         </form>
 
-        <form
-          id="register-form"
-          style="display: none"
-          onsubmit="handleRegister(event)"
-        >
+        <form id="register-form"
+        style="display: none"
+         onsubmit="handleRegister(event)">
           <h2>Register</h2>
-          <label for="register-email">Email:</label>
-          <input type="email" id="register-email" required />
-          <label for="register-password">Password:</label>
-          <input type="password" id="register-password" required />
-          <button type="submit">Register</button>
+          
+          <label for="fName">First Name</label><br />
+          <input type="text" id="fName" name="fName" required />
+          <br />
+          <label for="lName">Last Name</label><br />
+          <input type="text" id="lName" name="lName" />
+          <br />
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" />
+          <br />
+          <label for="password">Password</label><br />
+          <input type="password" id="password" name="password" required />
+          <br />
+          <button type="submit">Submit</button>
         </form>
       </div>
     </main>
@@ -52,12 +62,17 @@
 
       function handleRegister(event) {
         event.preventDefault();
-        const email = document.getElementById("register-email").value;
-        const password = document.getElementById("register-password").value;
-        localStorage.setItem("user", JSON.stringify({ email, password }));
+        const fName = document.getElementById("fName").value;
+        const lName = document.getElementById("lName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value; // Updated to use the correct password field
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ fName, lName, email, password })
+        );
         alert("Registration successful!");
         location.reload();
-        document.getElementById("login-form").style.display = "flex";
+        // document.getElementById("login-form").style.display = "flex";
       }
 
       function handleLogin(event) {
