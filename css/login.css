@@ -27,6 +27,7 @@ label {
 button{
     padding: 3px 10px;
     background-color: #f0a500;
+    margin-top: 1vh;
     border: none;
     color: white;
     cursor: pointer;

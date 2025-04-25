@@ -8,19 +8,14 @@
   </head>
   <body>
     <main>
-      <!-- <header> -->
-        <h1>Login/Register</h1>
-      <!-- </header> -->
-      <br />
       <div id="form-container">
+        <h1>Login/Register</h1>  
         <button onclick="toggleForm('login')">Login</button>
         <button onclick="toggleForm('register')">Register</button>
-
-        <!-- style="display: none" -->
         <form
           id="login-form"
           onsubmit="handleLogin(event)"
-        >
+        ><br>
           <h2>Login</h2>
           <label for="login-email">Email</label><br>
           <input type="email" id="login-email" required/>
@@ -34,8 +29,8 @@
         <form id="register-form"
         style="display: none"
          onsubmit="handleRegister(event)">
+         <br>
           <h2>Register</h2>
-          
           <label for="fName">First Name</label><br />
           <input type="text" id="fName" name="fName" required />
           <br />
