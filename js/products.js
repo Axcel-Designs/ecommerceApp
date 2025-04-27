@@ -41,13 +41,16 @@ async function getData(url) {
     productList.innerHTML += `        
         <div class="productCell">
           <img src="${product.thumbnail}" alt="${product.title}" class="productImage" width='100%' />
-        <details>
-        <summary><h4 class="productTitle">${product.title}</h4></summary>
-          <p class="description">${product.description.length > 50 ? product.description.substring(0, 50) + '...' : product.description}</p></details>
+          <details>
+            <summary><h4 class="productTitle">${product.title}</h4></summary>
+            <p class="description">${product.description.length > 50 ? product.description.substring(0, 50) + '...' : product.description}</p>
+          </details>
           <p class="category">Category: ${product.category}</p>
-          <p class="price">Price: N${product.price}</p>
-          <button class="addtocart">Add to Cart</button>
-          </div>`;
+          <div class='productPriceContainer'>
+           <p class="price">Price: N${product.price}</p>
+           <button class="addtocart">Add to Cart</button>
+          </div>
+        </div>`;
   });
 }
 // getData("https://fakestoreapi.com/products");

@@ -52,10 +52,15 @@ details summary{
     cursor: pointer;
     margin-bottom: 5px;
 }
+.productPriceContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px; 
+}
 button {
     padding: 3px 10px;
     background-color: #f0a500;
-    margin-top: 1vh;
     border: none;
     border-radius: 5px;
     color: white;
