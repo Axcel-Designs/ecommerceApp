@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/nav.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Product List</h1>
+      <h1>Product List</h1>
+       <nav>
+        <div id="ham">
+          <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <ul>
+          <!-- <li><a href="products.html">Product List</a></li> -->
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="index.html">Signout</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div id="product-list">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p>Price: $10</p>
-                <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h2>Product 2</h2>
-                <p>Price: $20</p>
-                <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
-            </div>
-        </div>
+      <div id="productList"></div>
     </main>
-    <script>
-        function addToCart(productName, price) {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.name === productName);
-            if (existingProduct) {
-                existingProduct.quantity += 1;
-            } else {
-                cart.push({ name: productName, price, quantity: 1 });
-            }
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${productName} added to cart!`);
-        }
-    </script>
-</body>
+    <script src="js/nav.js"></script>
+    <script></script>
+    <script src="js/products.js"></script>
+  </body>
 </html>
+

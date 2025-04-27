@@ -9,27 +9,28 @@
   <body>
     <main>
       <div id="form-container">
-        <h1>Login/Register</h1>  
+        <h1>Login/Register</h1>
         <button onclick="toggleForm('login')">Login</button>
         <button onclick="toggleForm('register')">Register</button>
-        <form
-          id="login-form"
-          onsubmit="handleLogin(event)"
-        ><br>
-          <h2>Login</h2>
-          <label for="login-email">Email</label><br>
-          <input type="email" id="login-email" required/>
+        
+        <form id="login-form" onsubmit="handleLogin(event)">
           <br />
-          <label for="login-password">Password</label><br>
-          <input type="password" id="login-password" required/>
+          <h2>Login</h2>
+          <label for="login-email">Email</label><br />
+          <input type="email" id="login-email" required />
+          <br />
+          <label for="login-password">Password</label><br />
+          <input type="password" id="login-password" required />
           <br />
           <button type="submit">Submit</button>
         </form>
 
-        <form id="register-form"
-        style="display: none"
-         onsubmit="handleRegister(event)">
-         <br>
+        <form
+          id="register-form"
+          style="display: none"
+          onsubmit="handleRegister(event)"
+        >
+          <br />
           <h2>Register</h2>
           <label for="fName">First Name</label><br />
           <input type="text" id="fName" name="fName" required />

@@ -1,0 +1,54 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins';
+ }
+ header {
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+     height: 100px;
+     background: rgb(215, 224, 228);
+ }
+
+ #ham {
+     display: none;
+     cursor: pointer;
+     padding: 2vw;
+ }
+
+ nav ul {
+     display: flex;
+     gap: 2vw;
+ }
+ 
+ nav ul a {
+     cursor: pointer;
+     color: black;
+ }
+
+ nav ul li a:hover {
+     /* color: #f0a500; */
+     color: #7c5500;
+ }
+ @media screen and (max-width: 768px) {
+     nav ul {
+         box-sizing: border-box;
+         display: none;
+         position: absolute;
+         right: 0;
+         width: 40%;
+         background-color: rgb(166, 166, 235);
+         height: 100%; 
+         padding: 1vw 0 0 2vw;
+     }
+        nav ul li a {
+            color: white;
+        }
+     #ham {
+         display: flex;
+     }
+ }

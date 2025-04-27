@@ -20,10 +20,14 @@ main{
 }  
 label,input{
     margin: 1vw 0;
+    width: 100%;
 }
-label {
-    width: 500px;
+input{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
 button{
     padding: 3px 10px;
     background-color: #f0a500;
