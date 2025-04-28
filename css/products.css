@@ -26,9 +26,6 @@ header{
     padding: 2vw;
 }
 .productCell{
-    /* width: 300px; */
-    /* height: 350px; */ 
-
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -39,7 +36,7 @@ header{
     padding: 10px;
     transition: transform 0.2s;
 }
-.productCell:hover {
+.productCell:active {
     transform: scale(1.05);
 }
 .productImage{

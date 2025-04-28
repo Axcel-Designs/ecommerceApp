@@ -10,6 +10,9 @@
         width: 100%;
     }
  header {
+    width: 100%;
+    position: sticky;
+    top:0;
      padding: 10px;
      display: flex;
      justify-content: space-between;
@@ -22,10 +25,10 @@
      cursor: pointer;
      padding: 2vw;
  }
- /* nav{
-    position: relative;
- } */
 
+ nav{
+    padding: 1vw;
+ }
  nav ul {
      display: flex;
      gap: 2vw;
@@ -43,15 +46,17 @@
      nav ul {
          box-sizing: border-box;
          display: none;
-         position: absolute;
+         position: fixed;
+         top: 25px;
          right: 0;
          width: 40%;
          background-color: rgb(166, 166, 235);
+        background: rgb(215, 224, 228);
          height: 100%; 
          padding: 1vw 0 0 2vw;
      }
         nav ul li a {
-            color: white;
+            color: rgb(0, 0, 0);
         }
      #ham {
          display: flex;

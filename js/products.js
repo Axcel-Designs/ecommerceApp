@@ -50,4 +50,18 @@ async function getData(url) {
         </div>`;
   });
 }
+
+function addToCart(id, title, price, thumbnail) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingProduct = cart.find((item) => item.id === id);
+
+  if (existingProduct) {
+    existingProduct.quantity += 1; // Increment quantity if the product already exists in the cart
+  } else {
+    cart.push({ id, title, price, thumbnail, quantity: 1 }); // Add new product to the cart
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
+  alert(`${title} has been added to your cart!`);
+}
 getData("https://dummyjson.com/products");
