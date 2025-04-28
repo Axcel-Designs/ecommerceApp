@@ -6,6 +6,9 @@
     text-decoration: none;
     font-family: 'poppins';
  }
+    body{
+        width: 100%;
+    }
  header {
      padding: 10px;
      display: flex;
@@ -19,6 +22,9 @@
      cursor: pointer;
      padding: 2vw;
  }
+ /* nav{
+    position: relative;
+ } */
 
  nav ul {
      display: flex;
@@ -31,7 +37,6 @@
  }
 
  nav ul li a:hover {
-     /* color: #f0a500; */
      color: #7c5500;
  }
  @media screen and (max-width: 768px) {

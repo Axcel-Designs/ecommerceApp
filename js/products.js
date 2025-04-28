@@ -4,10 +4,10 @@ async function getData(url) {
   const data = await fetch(url);
   const response = await data.json();
 
-//   response.productforEach((product) => {
-      response.products.forEach((product) => {
-        console.log(product);
-        
+  //   response.productforEach((product) => {
+  response.products.forEach((product) => {
+    console.log(product);
+
     // const productCell = document.createElement("div");
     // productCell.className = "productCell";
 
@@ -41,17 +41,13 @@ async function getData(url) {
     productList.innerHTML += `        
         <div class="productCell">
           <img src="${product.thumbnail}" alt="${product.title}" class="productImage" width='100%' />
-          <details>
-            <summary><h4 class="productTitle">${product.title}</h4></summary>
-            <p class="description">${product.description.length > 50 ? product.description.substring(0, 50) + '...' : product.description}</p>
-          </details>
+          <h4 class="productTitle">${product.title}</h4>
           <p class="category">Category: ${product.category}</p>
           <div class='productPriceContainer'>
-           <p class="price">Price: N${product.price}</p>
-           <button class="addtocart">Add to Cart</button>
+          <p class="price">Price: N${product.price}</p>
+          <button class="addtocart">Add to Chart</button>
           </div>
         </div>`;
   });
 }
-// getData("https://fakestoreapi.com/products");
 getData("https://dummyjson.com/products");
